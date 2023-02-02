@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -11,14 +10,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const baseURL = 'https://jsonplaceholder.typicode.com/posts';
-
-const bull = (
-    <Box
-        component='span'
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
-        •
-    </Box>
-);
 
 export default function Post() {
     const [post, setPost] = useState(null);

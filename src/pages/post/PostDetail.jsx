@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, NavLink, useOutletContext } from 'react-router-dom';
 import axios from 'axios';
 import { FaComments } from 'react-icons/fa';
 import AOS from 'aos';
@@ -10,8 +10,6 @@ export default function PostDetail() {
     const { postId } = useParams();
     const [detail, setDetail] = useState(null);
     const [user, setUser] = useState(null);
-    const [comment, setComment] = useState(null);
-    const [toggleComment, setToggleComment] = useState(null);
 
     useEffect(() => {
         AOS.init();
@@ -57,16 +55,19 @@ export default function PostDetail() {
                         Creator: {user.name}
                     </span>
 
-                    <div className='flex self-end gap-4 justify-center items-center text-gray-600 hover:cursor-pointer hover:text-gray-500 duration-200'>
+                    <NavLink
+                        to={'comments'}
+                        end
+                        className='flex self-start gap-4 justify-center items-center text-blue-500 hover:cursor-pointer hover:text-blue-600 duration-200'>
                         <span className='font-semibold'>Comments</span>
                         <FaComments className='text-[30px]' />
 
                         <div className='relative top-[-5px] right-6 h-[10px] w-[10px] bg-red-600 rounded-full'></div>
-                    </div>
+                    </NavLink>
                 </div>
             </div>
 
-            <Outlet />
+            <Outlet context={{ postId }} />
         </div>
     );
 }
