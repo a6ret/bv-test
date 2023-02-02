@@ -29,7 +29,7 @@ export default function Post() {
     return (
         <div className='min-h-screen w-full bg-slate-100'>
             <div className='h-full max-w-[1024px] mx-auto flex justify-center items-center flex-col gap-10'>
-                <h1 className='mt-[10%] font-semibold text-3xl self-start'>
+                <h1 className='mt-[30%] md:mt-[10%] font-semibold text-3xl self-start'>
                     List Post
                 </h1>
 
