@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
+    body {
+        font-style: 'Cairo';
+    }
+
+    li {
+        @apply px-4;
+        @apply cursor-pointer;
+    }
+}
+
+.active {
+    color: #3b82f6;
+}
+
+.toggle-dropdown-profile {
+    display: none;
+}
