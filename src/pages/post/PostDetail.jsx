@@ -39,7 +39,7 @@ export default function PostDetail() {
         <div className='min-h-screen w-full bg-slate-100'>
             <div className='h-full max-w-[1024px] mx-auto flex justify-center items-center flex-col gap-10'>
                 <div
-                    className='mt-[10%] flex flex-col w-[100%] gap-[20px] text-center'
+                    className='mt-[30%] md:mt-[10%] flex flex-col w-[100%] gap-[20px] text-center'
                     data-aos='fade-up'
                     data-aos-anchor-placement='center-center'
                     data-aos-easing='linear'
